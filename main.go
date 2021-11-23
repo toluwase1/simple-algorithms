@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sort"
+	"strings"
 )
 
 func foobar() func() int {
@@ -196,7 +197,16 @@ func SortNumbers(numbers []int) []int {
 	return []int{} // your code here
 }
 
+func solution(str, ending string) bool {
+	//endsWith:= strings.HasPrefix(str, ending)
+	if strings.HasSuffix(str, ending) {
+		return true
+	}
+	return false //
+}
+
 func main() {
 	fmt.Println(firstBadVersion(50))
 	fmt.Println(firstBadVersion2(50))
+	fmt.Println(solution("abc", "bc"))
 }
